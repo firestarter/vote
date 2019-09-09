@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>📋 Vote - Firestarter</title>
+        <link rel="icon" type="image/png" href="./img/logo.png">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+            * {
+                font-family: 'Roboto';
+                user-select: none;
+            }
+            body {
+                margin: 0;
+                background-color: #E6E6E6;
+            }
+            #header {
+                padding: 10px;
+                position: absolute;
+                top: 0; 
+                left: 0; 
+                right: 0; 
+                height: 70px; 
+                background-color: #f1f1f1;
+                z-index: 450;
+                border-radius: 0px 0px 15px 15px;
+                box-shadow: 0 4px 6px rgba(50,50,93,.05), 0 1px 3px rgba(0,0,0,.05);
+            }
+            #header a {
+                color: purple;
+            }
+            #logo {
+                height: 60px;
+                padding: 5px 0px 5px 10px;
+            }
+            #site-count {
+                float: right;
+                position: absolute;
+                top: 8px;
+                right: 30px;
+            }
+            #main {
+                position: absolute; 
+                top: 80px; 
+                left: 0; 
+                right: 0; 
+                bottom: 0; 
+            }
+            #main iframe {
+                display: block; 
+                width: 100%; 
+                height: 100%; 
+                border: none;
+            }
+            #nav-button {
+                cursor: pointer;
+                display: inline-block;
+                background-color: rgb(82, 82, 82);
+                border-radius: 50px;
+                padding: 10px;
+                transition: 0.3s;
+                box-shadow: 0 4px 6px rgba(50,50,93,.05), 0 1px 3px rgba(0,0,0,.05);
+            }
+            #nav-button:hover {
+                background-color: rgb(68, 68, 68);
+                box-shadow: 0 4px 6px rgba(50,50,93,.2), 0 1px 3px rgba(0,0,0,.10);
+            }
+            #nav-button i {
+                color: white;
+                font-size: 32px;
+                padding: 0;
+                margin: 0;
+                vertical-align: middle;
+            }
+            #frame {
+                transition: 0.3s;
+                z-index: 10;
+            }
+            .left-button {
+                position: fixed;
+                left: 35px;
+                top: 50%;
+                z-index: 500;
+            }
+            .right-button {
+                position: fixed;
+                right: 35px;
+                top: 50%;
+                z-index: 500;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <div>
+                    <p id="nav-button" class="left-button" onClick="previousPage()"><i class="material-icons">keyboard_arrow_left</i></p>
+                    <img id="logo" src="./img/navbar-logo.png">
+                    <p id="nav-button" class="right-button" onClick="nextPage()"><i class="material-icons">keyboard_arrow_right</i></p>
+                </div>
+                <h1 id="site-count">Site 1/10</h1>
+            </div>
+            <div id="main">
+                <iframe id="frame" src="https://minecraft-statistic.net/en/server/157.245.9.245_25565.html" style="visibility:hidden;" onload="this.style.visibility = 'visible';"></iframe>
+            </div>
+        </div>
+
+        <script>
+            let index = 0
+            let pages = [
+                "https://minecraftservers.org/vote/562392",
+                "https://www.planetminecraft.com/server/firestarter-4385861/vote/",
+                "https://minecraft-statistic.net/en/server/157.245.9.245_25565.html",
+                "https://minecraft-server-list.com/server/445696/vote/",
+                "https://minecraft-mp.com/server/232422/vote/",
+                "https://topminecraftservers.org/server/7919",
+                "https://minecraft-server.net/vote/Firestarter/",
+                "https://minecraftservers.biz/servers/144798/#vote_now",
+                "https://minecraftlist.org/vote/13840",
+                "https://www.trackyserver.com/server/firestarter-a-1-14-4-survival-realm-349950"
+            ]
+
+            function updateCount() {
+                document.getElementById('site-count').innerHTML = `Site ${index + 1}/${pages.length}`
+            }
+
+            function previousPage() {
+                var newIndex = index - 1
+                if (newIndex < 0) return;
+                index--;
+                document.getElementById('frame').src = pages[index]
+                updateCount();
+            }
+
+            function nextPage() {
+                var newIndex = index + 1
+                if (newIndex >= pages.length) return;
+                index++;
+                document.getElementById('frame').src = pages[index]
+                updateCount();
+            }
+
+            window.onload = function() {
+                document.getElementById('frame').src = pages[index]
+                updateCount();
+            }
+        </script>
+    </body>
+</html>
