@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>📋 Vote - Firestarter</title>
+        <title>Vote - Firestarter</title>
         <link rel="icon" type="image/png" href="./img/logo.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
-            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
             * {
-                font-family: 'Roboto';
+                font-family: 'Karla';
                 user-select: none;
             }
             body {
@@ -21,28 +21,32 @@
                 top: 0; 
                 left: 0; 
                 right: 0; 
-                height: 70px; 
-                background-color: #1b1b1b;
+                height: 2em; 
+                background-color: #222222 !important;
                 z-index: 450;
-                box-shadow: 0 4px 6px rgba(50,50,93,.05), 0 1px 3px rgba(0,0,0,.05);
+                box-shadow: 0 3px 15px 0 rgba(0,0,0,.3);
             }
             #header a {
                 color: purple;
             }
             #logo {
-                height: 55px;
-                padding: 5px 0px 5px 10px;
+                height: 2em;
             }
             #site-count {
                 float: right;
                 position: absolute;
-                top: 8px;
-                right: 30px;
+                top: -0.05em;
+                right: 0.5em;
                 color: white;
+                font-weight: 600;
+                font-size: 1.2em;
+                background-color: #333333;
+                padding: 0.1em 1.3em;
+                border-radius: 2em;
             }
             #main {
                 position: absolute; 
-                top: 90px; 
+                top: 3.2em; 
                 left: 0; 
                 right: 0; 
                 bottom: 0; 
@@ -56,14 +60,14 @@
             #nav-button {
                 cursor: pointer;
                 display: inline-block;
-                background-color: rgb(82, 82, 82);
+                background-color: rgb(255, 91, 91);
                 border-radius: 50px;
                 padding: 10px;
                 transition: 0.3s;
-                box-shadow: 0 4px 6px rgba(50,50,93,.05), 0 1px 3px rgba(0,0,0,.05);
+                box-shadow: 0 4px 6px rgba(50,50,93,.2), 0 1px 3px rgba(0,0,0,.02);
             }
             #nav-button:hover {
-                background-color: rgb(68, 68, 68);
+                background-color: rgb(221, 79, 79);
                 box-shadow: 0 4px 6px rgba(50,50,93,.3), 0 1px 3px rgba(0,0,0,.20);
             }
             #nav-button i {
@@ -106,6 +110,11 @@
             </div>
         </div>
 
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
         <script>
             let index = 0
             let pages = [
