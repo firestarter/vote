@@ -66,3 +66,14 @@ body {
     max-height: 20em;
     float: right;
 }
+
+.reddit-ad {
+    background-color: #FF5700;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1.2em;
+    font-size: 1.3em;
+    text-decoration: none;
+}
