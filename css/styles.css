@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,600&display=swap');
 
 h3, h4 {
     margin: 0 0 8px 0;
@@ -9,17 +9,18 @@ h3, h4, a, code {
 }
 
 h3, h4, a {
-    color: white;
+    color: #a3a3a3;
 }
 
 h3 {
-    font-weight: 700;
-    font-size: 1.75em;
+    font-weight: 600;
+    font-size: 1.7em;
+    color: #ff9040;
 }
 
 h4 {
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: 1.09em;
 }
 
 code {
@@ -27,7 +28,7 @@ code {
 }
 
 body {
-    background-color: #1C1C1C;
+    background-color: #0e1217;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -39,7 +40,7 @@ body {
 .vote-buttons {
     margin: 0 auto;
     display: block;
-    max-width: 32em;
+    max-width: 35em;
 }
 
 .site-button {
@@ -48,32 +49,38 @@ body {
     color: white;
     cursor: pointer;
     display: inline-block;
-    background-color: #F79967;
-    border-radius: 5px;
+    background: #1f2630;
+    border-radius: 0.3em;
     padding: 10px;
-    transition: 0.2s;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .2), 0 1px 3px rgba(0, 0, 0, .02);
+    box-shadow: 0 2px 15px 0 rgb(0 0 0 / 2%);
     text-decoration: none;
+    transition: background 0.3s ease;
+
+    width: 1em;
+    text-align: center;
 }
 
 .site-button:hover {
-    background-color: #EC9060;
-    transform: translateY(1.5px);
-    color: white;
+  background: #FF9B4F;
+  background: linear-gradient(to right, #FF4621 0%,  #FF9B4F 100%);
+  color: white;
+}
+
+.streak {
+  background: #FF9B4F;
+  background: linear-gradient(to right, #FF4621 0%,  #FF9B4F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
 
 .uwu {
     max-height: 20em;
     float: right;
-}
+    top: -4em;
+    left: 2em;
+    position: relative;
 
-.reddit-ad {
-    background-color: #FF5700;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1.2em;
-    font-size: 1.3em;
-    text-decoration: none;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }

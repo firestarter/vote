@@ -11,9 +11,10 @@
 
 <body>
     <div class="vote-buttons">
-        <img class="uwu" src="img/uwu.gif">
-        <h3>Vote for us!</h1>
-        <h4>Each vote rewards you with a token, redeemable in <code>/cosmetics</code>, and money! Vote 5 times to increase your vote streak and earn more money for future votes!</h3>        
+        <img class="uwu" src="img/plsvote.gif">
+        <h3>Vote for us!</h3>
+        <h4 style="color: #d4d4d4;">Each vote rewards you with a Flare and money!</h4>
+        <h4>Vote on all sites to increase your <span class="streak">streak</span> and earn more money for future votes!</h4>        
         <br/>
         <a class="site-button" href="https://minecraftservers.org/vote/562392" target="_blank">1</a>
         <a class="site-button" href="https://minecraft-server.net/vote/Firestarter/" target="_blank">2</a>
@@ -22,9 +23,18 @@
         <a class="site-button" href="https://minecraft-server-list.com/server/445696/vote/" target="_blank">5</a>
         <a class="site-button" href="https://minecraft-mp.com/server/232422/vote/" target="_blank">6</a>
     </div>
-    <div class="reddit-ad">
-        <a href="https://www.reddit.com/r/mcservers/comments/s43ymt" target="_blank">Have some spare time? Upvote us on Reddit!</a>
-    </div>
+
+    <script>
+      let elements = document.getElementsByClassName("site-button")
+      
+      for (let i = 0; i < elements.length; i++) {
+        let element = elements[i]
+
+        element.addEventListener("click", () => {
+          element.style.background = "#4ade80"
+        })
+      }
+    </script>
 </body>
 
 </html>
