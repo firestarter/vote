@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&display=swap');
 
 h3, h4 {
     margin: 0 0 8px 0;
 }
 
 h3, h4, a, code {
-    font-family: "Karla";
+    font-family: "Lexend";
 }
 
 h3, h4, a {
@@ -28,8 +28,9 @@ code {
 }
 
 body {
-    background-color: #0e1217;
-    min-height: 90vh;
+    background-color: #131110;
+    height: 100vh;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,20 +50,19 @@ body {
     color: white;
     cursor: pointer;
     display: inline-block;
-    background: #1f2630;
+    background: #24211F;
     border-radius: 0.3em;
     padding: 10px;
     box-shadow: 0 2px 15px 0 rgb(0 0 0 / 2%);
     text-decoration: none;
     transition: background 0.3s ease;
-
     width: 1em;
     text-align: center;
 }
 
 .site-button:hover {
-  background: #FF9B4F;
-  background: linear-gradient(to right, #FF4621 0%,  #FF9B4F 100%);
+  background: #2C2926;
+/*  background: linear-gradient(to right, #FF4621 0%,  #FF9B4F 100%); */
   color: white;
 }
 
@@ -75,12 +75,11 @@ body {
 }
 
 .uwu {
-    max-height: 20em;
-    float: right;
-    top: -4em;
-    left: 2em;
-    position: relative;
-
-    -webkit-transform: scaleX(-1);
+  max-height: 20em;
+  float: right;
+  top: -4em;
+  left: 2em;
+  position: relative;
+  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
