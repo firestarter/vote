@@ -60,7 +60,9 @@ body {
 }
 
 .image {
-  max-height: 20em;
+  position: relative;
+  top: -2em;
+  max-height: 18em;
   margin: auto;
   grid-column: 1;
   grid-row: 1;
