@@ -95,6 +95,28 @@ body {
   color: white;
 }
 
+.reddit-post {
+  margin-top: 1em;
+  float: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  background: #f86a23ff;
+  border-radius: 0.3em;
+  padding: 10px;
+  box-shadow: 0 2px 15px 0 rgb(0 0 0 / 2%);
+  text-decoration: none;
+  transition: background 0.3s ease;
+  width: 16em;
+  text-align: center;
+}
+
+.reddit-post:hover {
+  background: #FF4500;
+  /*  background: linear-gradient(to right, #FF4621 0%,  #FF9B4F 100%); */
+  color: white;
+}
+
 .optional {
   background: #553518;
 }
