@@ -40,7 +40,7 @@ code {
 }
 
 body {
-  background-color: #131110;
+  background-color: #1a1a1a;
   height: 100vh;
   margin: 0;
   display: flex;
@@ -79,10 +79,10 @@ body {
   color: white;
   cursor: pointer;
   display: inline-block;
-  background: #24211F;
+  background: #312c2aff;
   border-radius: 0.3em;
   padding: 10px;
-  box-shadow: 0 2px 15px 0 rgb(0 0 0 / 2%);
+  box-shadow: 0 2px 15px 0 rgb(0 0 0 / 5%);
   text-decoration: none;
   transition: background 0.3s ease;
   width: 1em;
@@ -90,13 +90,13 @@ body {
 }
 
 .site-button:hover {
-  background: #2C2926;
+  background: #3b3634ff;
   /*  background: linear-gradient(to right, #FF4621 0%,  #FF9B4F 100%); */
   color: white;
 }
 
 .reddit-post {
-  margin-top: 3em;
+  margin-top: 1em;
   float: none;
   color: white;
   cursor: pointer;
@@ -109,6 +109,8 @@ body {
   transition: background 0.3s ease;
   width: 16em;
   text-align: center;
+
+  animation: smooth-blink 1s infinite alternate;
 }
 
 .reddit-post:hover {
@@ -153,5 +155,15 @@ body {
   .buttons {
     grid-column: 1;
     grid-row: 1;
+  }
+}
+
+@keyframes smooth-blink {
+  0% {
+    filter: brightness(0.8);
+  }
+
+  100% {
+    filter: brightness(1);
   }
 }
