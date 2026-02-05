@@ -97,6 +97,7 @@ body {
 
 .reddit-post {
   margin-top: 1em;
+  margin-bottom: 2em;
   float: none;
   color: white;
   cursor: pointer;
